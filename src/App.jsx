@@ -10,7 +10,7 @@ import CreateOrder, {
 import Order, { loader as orderLoader } from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
-const router = createBrowserRouter([
+const routes = [
   {
     element: <AppLayout />,
     errorElement: <Error />,
@@ -36,7 +36,11 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, {
+  basename: "/Fast-React-Pizza",
+});
 
 function App() {
   return <RouterProvider router={router} />;
