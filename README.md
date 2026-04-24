@@ -3,6 +3,11 @@
 Fast React Pizza Co. is a modern single-page pizza ordering app built with React and a feature-first architecture.
 It demonstrates production-style patterns including route data loading/actions, centralized Redux state, async flows, and clean reusable UI components.
 
+## Live Versions
+
+- Latest: https://fast-pizza-restaurant.vercel.app/
+- Old (legacy): https://ahmed-adel-morsi.github.io/Fast-React-Pizza
+
 ## ✨ Overview
 
 This project allows users to:
@@ -18,12 +23,12 @@ This project allows users to:
 - Feature-based folder structure: cart, menu, order, user
 - Redux Toolkit slices for user and cart state management
 - React Router data APIs:
-	- loader for menu and order fetching
-	- action for order creation and order priority update
+  - loader for menu and order fetching
+  - action for order creation and order priority update
 - Fetcher-based background menu loading on order details page
 - Responsive Tailwind UI with reusable building blocks
 - Dedicated loading, error, empty-state, and search flows
-- GitHub Pages deployment support out of the box
+- Vercel production deployment
 
 ## 🧱 Tech Stack
 
@@ -49,7 +54,8 @@ This project allows users to:
 
 ### Deployment
 
-- GitHub Pages via gh-pages
+- Vercel (current production)
+- GitHub Pages (legacy hosted version)
 
 ## 🗂️ Project Structure
 
@@ -81,9 +87,9 @@ src/
 ## 🌐 External APIs
 
 - Pizza API (menu + orders)
-	- https://react-fast-pizza-api.jonas.io/api
+  - https://react-fast-pizza-api.jonas.io/api
 - Reverse Geocoding API
-	- https://api.bigdatacloud.net/data/reverse-geocode-client
+  - https://api.bigdatacloud.net/data/reverse-geocode-client
 
 ## ⚙️ Getting Started
 
@@ -124,16 +130,26 @@ npm run lint
 
 ## 📦 Deployment
 
-This project is preconfigured for GitHub Pages deployment.
+This project is currently deployed on Vercel.
+
+Latest deployment:
+
+- https://fast-pizza-restaurant.vercel.app/
+
+Legacy deployment:
+
+- https://ahmed-adel-morsi.github.io/Fast-React-Pizza
+
+To deploy updates, connect the repository to Vercel and deploy from the main branch (or run deployment through the Vercel dashboard/CLI workflow).
 
 ```bash
-npm run deploy
+npm run build
 ```
 
 Deployment notes:
 
-- Vite base path is set to /Fast-React-Pizza.
-- Router basename is also set to /Fast-React-Pizza.
+- Vite config and router currently use /Fast-React-Pizza as base/basename, which is required for the legacy GitHub Pages path.
+- For a root-domain Vercel-only setup, update/remove that base path in configuration.
 
 ## 📜 Available Scripts
 
@@ -141,8 +157,6 @@ Deployment notes:
 - npm run build: build production assets
 - npm run preview: preview built app locally
 - npm run lint: run ESLint checks
-- npm run predeploy: run production build before deployment
-- npm run deploy: publish dist to GitHub Pages
 
 ## ⚠️ Current Limitations
 
